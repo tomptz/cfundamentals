@@ -79,7 +79,7 @@ void read_input_string(int argc, char * argv[], char ** dest)
 	for(int i=1; i<argc; i++)
 		req_length += strlen(argv[i]);
 
-	*dest = (char*) malloc(req_length+1); //Don't forget one byte for null terminating char
+	*dest =  malloc(req_length+1); //Don't forget one byte for null terminating char
 
 	strncpy(*dest, argv[1], req_length);
 
