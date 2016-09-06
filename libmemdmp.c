@@ -15,6 +15,7 @@
 void memdmp(char* start, int count)
 {
 	//Print header row
+	printf("\n");
 	printf("         ");
 
 	for(int col = 0; col<16; col++)
@@ -79,5 +80,7 @@ void memdmp(char* start, int count)
 		printf("\n");
 
 	}
+
+	printf("\n");
 
 }
