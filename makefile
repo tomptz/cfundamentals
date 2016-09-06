@@ -1,4 +1,4 @@
-all : basics calculator palindrome hex2int convert_getopt memdmp memcopy random_fill
+all : basics calculator palindrome hex2int convert_getopt memdmp memcopy random_fill inputsort
 
 basics : basics.c
 	gcc -o basics basics.c
@@ -23,4 +23,6 @@ memcopy : memcopy.c libmemdmp.c
 
 random_fill : random_fill.c 
 	gcc -g -o random_fill random_fill.c
-	
+
+inputsort : inputsort.c
+	gcc -g -o inputsort inputsort.c	
