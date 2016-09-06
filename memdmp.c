@@ -24,6 +24,7 @@ int main(int argc, char *argv[])
 
 void memdmp(char* start, int count)
 {
+	//Print header row
 	printf("         ");
 
 	for(int col = 0; col<16; col++)
@@ -42,11 +43,14 @@ void memdmp(char* start, int count)
 
 	printf("\n");
 
+	//Print the rows containing the memory contents
+
 	int current = 0;
 	while(current<count)
 	{
 		printf("0x%04X | ", current);
 
+		//First print the hex numbers
 		for(int col = 0; col<16; col++)
 		{
 			if(current<count)
@@ -58,10 +62,13 @@ void memdmp(char* start, int count)
 
 		}
 
-		current -= 16; //Reset current mem pointer
+		//Reset current mem pointer
+		current -= 16;
 
 		printf(" | ");
 
+
+		//Now print the same memory content using ASCII
 		for(int col = 0; col<16; col++)
 		{
 			char current_char = *(start+current);
@@ -78,6 +85,7 @@ void memdmp(char* start, int count)
 
 		}
 
+		//Move on to next row
 		printf("\n");
 
 	}
