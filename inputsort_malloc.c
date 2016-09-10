@@ -43,6 +43,7 @@ int main(int argc, char *argv[])
 		printf("Error: malloc failed.\n");
 		exit(EXIT_FAILURE);
 	}
+
 	for (int i = 0; i < numbers_to_read; ++i) {
 		fscanf(stdin, "%d", numbers+i);
 	}

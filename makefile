@@ -1,4 +1,4 @@
-all : basics calculator palindrome hex2int convert_getopt memdmp memcopy random_fill inputsort inputsort_malloc recursion_reverse recursion_count
+all : basics calculator palindrome hex2int convert_getopt memdmp memcopy random_fill inputsort inputsort_malloc recursion_reverse linked_list_test
 
 basics : basics.c
 	gcc -o basics basics.c
@@ -28,11 +28,14 @@ inputsort : inputsort.c
 	gcc -g -o inputsort inputsort.c	
 	
 inputsort_malloc : inputsort_malloc.c
-	gcc -g -o inputsort_malloc inputsort_malloc.c	
+	$(CC) -g -o inputsort_malloc inputsort_malloc.c	
 
 recursion_reverse : recursion_reverse.c
-	gcc -g -o recursion_reverse recursion_reverse.c
+	$(CC) -g -o recursion_reverse recursion_reverse.c
 	
-recursion_count : recursion_count.c
-	gcc -g -o recursion_count recursion_count.c
+linked_list_test : linked_list_test.c linked_list.c linked_list.h
+	$(CC) -Wall -Wextra -g -o linked_list_test linked_list_test.c linked_list.c -lcunit -fprofile-arcs -ftest-coverage
+	
+clean:
+	rm  inputsort_malloc recursion_reverse linked_list_test
 	
