@@ -54,20 +54,8 @@ int main(int argc, char *argv[])
 	}
 
 
+	free(numbers);
 
-
-	//
-	//
-	//	fgets(buffer, 1000, stdin);
-	//	numbers_read = getNumbers(buffer, numbers, 100);
-	//
-	//	qsort(numbers, numbers_read, sizeof(int), compare);
-	//
-	//	for (int i=0; i<numbers_read; i++)
-	//	{
-	//		printf("%d\n", numbers[i]);
-	//	}
-	//
 
 
 }
