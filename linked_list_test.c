@@ -49,12 +49,13 @@ void element_copy(const void* src, void* dest)
 		person_dest->child = (person_t*) element_malloc();
 		element_copy(person_src->child, person_dest->child);
 	}
+	else
+		person_dest->child = NULL;
 
 }
 
 void element_free(void** element)
 {
-
 	person_t** person = (person_t**) element;
 
 	if((*person)->child != NULL)
@@ -105,7 +106,7 @@ int init_suite1(void)
 int clean_suite1(void)
 {
 	element_free((void **)&father);
-	element_free((void **)&son);
+	//element_free((void **)&son);
 	return 0;
 
 }

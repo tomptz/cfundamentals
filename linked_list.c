@@ -105,7 +105,6 @@ void print_list(const llist_t* list)
 				break;
 
 		}
-
 	}
 }
 
